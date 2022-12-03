@@ -38,12 +38,18 @@ void main() {
     group('login', () {
       setUp(() {
         when(mockResponse.data).thenAnswer((realInvocation) => mockData);
-        when(dio.post('/auth/login')).thenAnswer((e) async => mockResponse);
+        when(dio.post(
+          '/auth/login',
+          data: {'username': param.username, 'password': param.password},
+        )).thenAnswer((e) async => mockResponse);
       });
 
       test('calls dio.post', () {
         repo.login(param);
-        verify(dio.post('/auth/login'));
+        verify(dio.post(
+          '/auth/login',
+          data: {'username': param.username, 'password': param.password},
+        ));
         verifyNoMoreInteractions(dio);
       });
 
@@ -58,7 +64,10 @@ void main() {
       });
 
       test('throws server error when something goes wrong', () {
-        when(dio.post('/auth/login')).thenThrow(Exception());
+        when(dio.post(
+          '/auth/login',
+          data: {'username': param.username, 'password': param.password},
+        )).thenThrow(Exception());
         expect(repo.login(param), throwsA(const TypeMatcher<ServerError>()));
       });
     });

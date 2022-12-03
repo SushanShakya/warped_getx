@@ -1,1 +1,1 @@
-const String url = 'https://reqres.in/api';
+const String url = 'https://dummyjson.com';

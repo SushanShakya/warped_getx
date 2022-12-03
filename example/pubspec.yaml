@@ -16,6 +16,7 @@ dependencies:
   warped_getx:
     path: ../../warped_getx
   dio: ^4.0.6
+  get_it: ^7.2.0
 
 dev_dependencies:
   flutter_test:
