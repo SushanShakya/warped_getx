@@ -1,3 +1,9 @@
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/SushanShakya/warped_getx/main/assets/warped_getx.png" alt="Get" />
+</p>
+<br>
+
 # Warped GetX
 
 For people that use GetX and want a simple way of

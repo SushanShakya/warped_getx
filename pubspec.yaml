@@ -1,7 +1,9 @@
 name: warped_getx
 description: Making GetX as cool as BLoC
 version: 0.0.1
-homepage:
+repository: https://github.com/SushanShakya/warped_getx 
+issue_tracker: https://github.com/SushanShakya/warped_getx/issues
+homepage: https://github.com/SushanShakya/warped_getx 
 
 environment:
   sdk: ">=2.16.2 <3.0.0"
